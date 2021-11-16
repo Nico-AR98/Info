@@ -1,5 +1,6 @@
 package ejercicioslvl2;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ejercicio3 {
 
@@ -27,8 +28,22 @@ public class ejercicio3 {
             System.out.println(cartasFrancesas.get(i));
         }
 
+        System.out.println();
+
+        Collections.reverse(cartasFrancesas);
         
-        
+        for (String carta:cartasFrancesas){
+            System.out.println(carta);
+        }
+
+        Collections.shuffle(cartasFrancesas);
+
+        System.out.println();
+
+        for (String carta:cartasFrancesas){
+            System.out.println(carta);
+        }
 
     }
+
 }
