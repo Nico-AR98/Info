@@ -47,7 +47,3 @@ class ejercicio5 {
  
     }
 }
-
-
-
-
