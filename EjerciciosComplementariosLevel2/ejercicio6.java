@@ -2,9 +2,23 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-import empleado.Empleado;
 
-public class ejercicio6 {
+class ejercicio6 {
+
+    static class Empleado {
+        public String nombreyApellido;
+        public int DNI;
+        public int horasTrabajadas;
+        public int valorPorHora;
+        
+        public Empleado(String nombreyApellido, int DNI, int horasTrabajadas, int valorPorHora){
+            this.nombreyApellido=nombreyApellido;
+            this.DNI=DNI;
+            this.horasTrabajadas=horasTrabajadas;
+            this.valorPorHora=valorPorHora;
+        }
+    }
+    
     public static void main(String[] args) {
         //Se instancian algunos objetos de la clase empleado
         Empleado empleado1 = new Empleado("Juan Perez", 40985265, 8, 550);
@@ -17,8 +31,6 @@ public class ejercicio6 {
         empleados.add(empleado1);
         empleados.add(empleado2);
         empleados.add(empleado3);
-
-        
 
         //Declaracion-inicialización variable sueldo total
         int sueldoTotal=0;
