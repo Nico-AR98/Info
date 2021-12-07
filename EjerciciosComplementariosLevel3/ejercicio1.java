@@ -1,24 +1,22 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class ejercicio1 {
     public static void main(String[] args) {
-        List<String> palabras = new ArrayList<>();
-        palabras.add("Hola");
-        palabras.add(null);
-        palabras.add("Informatorio");
-        palabras.add("");
 
-        for (int i=0;i<palabras.size();i++){
-            if (palabras.get(i)=="" || palabras.get(i)==null){
-                palabras.remove(i);
-            }
-        }
+        List<String> lista = new ArrayList<String>();
 
-        for (int i=0;i<palabras.size();i++){
-          System.out.println(palabras.get(i));
-        }
+        lista.add("Hola");
+        lista.add(null);
+        lista.add("Informatorio");
+        lista.add("");
 
+        List<String> filtroLista = lista.stream()
+                        .filter(Objects::nonNull).filter(p -> p.equals("")).collect(Collectors.toList());
+
+        System.out.println(filtroLista);
     }
 
 }
